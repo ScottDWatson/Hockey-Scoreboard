@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hockey Scoreboard</title>
+</head>
+<body>
+
+    <!-- <div class="wrapper"> -->
+    <div id="scoreboard">
+        <div class="homepointscontainer">
+            <div class="homelabel">HOME</div>
+            <div id="homepoints">0</div>
+        </div>
+
+        <div id="bluesimg"><img src="274.png"></div>
+
+        <div class="awaypointscontainer">
+            <div class="awaylabel">AWAY</div>
+            <div id="awaypoints">0</div>
+        </div>
+
+        <div class="homepenaltiescontainer">
+            <div class="penaltieslabel">PENALTIES</div>
+            <div id="homepenalties">0</div>
+        </div>
+
+        <div class="timecontainer">
+            <div class="timelabel">TIME</div>
+            <div id="timer">20:00</div>
+        </div>
+
+        <div class="periodcontainer">
+            <div class="periodlabel">PERIOD</div>
+            <div id="period">1</div>
+        </div>
+
+        <div class="awaypenaltiescontainer">
+            <div class="penaltieslabel">PENALTIES</div>
+            <div id="awaypenalties">0</div>
+        </div>
+
+    </div>
+
+    <div id="controlpanel">
+        <div class="cpflexwrap1"></div>
+            <div class="homecpcontainer">
+                <!-- You will need to make the below labels with an ID that takes away backgroundcolor, border, etc -->
+                <!-- JS will need to connect to these btn elements via getByElementId(id) -->
+                <div class="goalslabel">GOALS</div>
+                <div class="btnwrapper"><button id="mns1homegoalbtn" onclick="homeGoalDecrement()">-1</button></div>
+                <div class="btnwrapper"><button id="pls1homegoalbtn" onclick="homeGoalIncrement()">+1</button></div>
+                <!-- You will need to make the below labels with an ID that takes away backgroundcolor, border, etc -->
+                <div class="penaltieslabel">PENALTIES</div>
+                <!-- Take into consideration whether or not to make the buttons here HTML btn elements or just leaving them as divs. Maybe try both and see how they turn out. -->
+                <div class="btnwrapper"><div id="mnshomepenaltybtn" onclick="homePenDecrement()">-1</div></div>
+                <div class="btnwrapper"><div id="plshomepenaltybtn" onclick="homePenIncrement()">+1</div></div>
+                <!-- You can probably leave this homelabel the same as the one on the scoreboard -->
+                <div class="homelabel">HOME</div>
+            </div>
+    
+            <div class="timecpcontainer">
+                <div class="space"></div>
+                <div class="btnwrapper"><div id="startbtn">START</div></div>
+                <div class="btnwrapper"><div id="pausebtn">PAUSE</div></div>
+                <div class="btnwrapper"><div id="resetbtn">RESET</div></div>
+                <div class="timelabel">TIMER</div>
+            </div>
+
+            <div class="periodcpcontainer">
+                <div class="space"></div>
+                <div class="btnwrapper"><button id="period1btn" onclick="period1()">1</button></div>
+                <div class="btnwrapper"><button id="period2btn" onclick="period2()">2</button></div>
+                <div class="btnwrapper"><button id="period3btn" onclick="period3()">3</button></div>
+                <div class="periodlabel">PERIOD</div>
+            </div>
+    
+            <div class="awaycpcontainer">
+                <!-- You will need to make the below labels with an ID that takes away backgroundcolor, border, etc -->
+                <!-- JS will need to connect to these btn elements via getByElementId(id) -->
+                <div class="btnwrapper"><button id="mns1awaygoalbtn"onclick="awayGoalDecrement()">-1</button></div>
+                <div class="btnwrapper"><button id="pls1awaygoalbtn" onclick="awayGoalIncrement()">+1</button></div>
+                <div class="awaygoalslabel">GOALS</div>
+                <!-- Take into consideration whether or not to make the buttons here HTML btn elements or just leaving them as divs. Maybe try both and see how they turn out. -->
+                <div class="btnwrapper"><div id="mns1awaypenaltybtn" onclick="awayPenDecrement()">-1</div></div>
+                <div class="btnwrapper"><div id="pls1awaypenaltybtn" onclick="awayPenIncrement()">+1</div></div>
+                <!-- You will need to make the below labels with an ID that takes away backgroundcolor, border, etc -->
+                <div class="awaypenaltieslabel">PENALTIES</div>
+                <!-- You can probably leave this homelabel the same as the one on the scoreboard -->
+                <div class="awaylabel">AWAY</div>
+            </div>
+        </div>
+    </div>
+    
+    
+<script src="index.js"></script>
+</body>
+</html>

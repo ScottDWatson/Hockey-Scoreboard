@@ -1,0 +1,372 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url("background3.webp");
+}
+
+/* .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+} */
+
+#scoreboard {
+    border: 5px solid black;
+    display: grid;
+    grid-template-areas: 'hpc bimg bimg apc'
+    'hpenc tc perc apenc';
+    gap:0;
+    background-color:#393737;
+    max-height: 500px;
+}
+
+.homepointscontainer {
+    grid-area:hpc;
+    display:flex;
+    flex-direction:column;
+}
+
+.homelabel {
+    font-weight: bold;
+    background-color: #D9D9D9;
+}
+
+#homepoints {
+    font-weight: bold;
+    background-color: #D9D9D9; 
+    width:50%;
+    margin:auto auto;
+    text-align: center;
+    font-size: 3em;
+    color:red;
+    border: 2px solid black;
+}
+
+#bluesimg {
+    border: 2px solid black;
+    grid-area:bimg;
+}
+
+#bluesimg img {
+    width:100%;
+    object-fit:cover;
+    max-width: 325px;
+}
+
+.awaypointscontainer {
+    border: 2px solid black;
+    grid-area:apc;
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.awaylabel {
+    font-weight: bold;
+    background-color: #D9D9D9;
+    border: 1px solid black;
+}
+
+#awaypoints {
+    font-weight: bold;
+    background-color: #D9D9D9; 
+    width:50%;
+    margin:auto auto;
+    text-align: center;
+    font-size: 3em;
+    color:red;
+    border: 2px solid black;
+}
+
+/* ------------------------------ */
+
+#controlpanel {
+    display:grid;
+    grid-template-areas: 'hcpcon tcpcon pcpcon acpcon';
+    border: 5px solid black;
+    gap:0;
+    position:absolute;
+    bottom:0;
+    background-color:#D9D9D9;
+}
+
+.homecpcontainer {
+    grid-area: hcpcon;
+    display: grid;
+    grid-template-areas: 'gllbl mns1hgbtn pls1hgbtn'
+    'penlbl mns1hpenbtn pls1hpenbtn'
+    'hcplbl hcplbl hcplbl';
+    gap:0;
+}
+.goalslabel {
+    grid-area:gllbl;
+    border: 1px solid black;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#D9D9D9;
+}
+#mns1homegoalbtn {
+    grid-area:mns1hgbtn;
+    border: 1px solid black;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:5px;
+}
+
+#pls1homegoalbtn {
+    grid-area:pls1hgbtn;
+    border: 1px solid black;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:5px;
+}
+
+.penaltieslabel {
+    grid-area:penlbl;
+    border: 1px solid black;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#D9D9D9;
+}
+#mnshomepenaltybtn {
+    grid-area:mns1hpenbtn;
+    border: 1px solid black;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:5px;
+}
+#plshomepenaltybtn {
+    grid-area:pls1hpenbtn;  
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:5px;
+    border: 1px solid black;
+}
+
+.homelabel {
+    grid-area:hcplbl;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#D9D9D9;
+}
+    
+.timecpcontainer {
+    grid-area: tcpcon;
+    display:grid;
+    grid-template-areas:'space space space'
+     'sbtn pbtn rbtn'
+    'tlbl tlbl tlbl';
+    flex-shrink: 1;
+    background-color:#D9D9D9;
+    border: 1px solid black;
+}
+
+#startbtn {
+    grid-area:sbtn;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:15px 5px;
+}
+#pausebtn {
+    grid-area:pbtn;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:15px 5px;
+}
+#resetbtn {
+    grid-area:rbtn;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:15px 5px;
+}
+.timelabel {
+    grid-area:tlbl;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#D9D9D9;
+}
+
+
+.periodcpcontainer {
+    grid-area:pcpcon;
+    display: grid;
+    grid-template-areas:'space space space'
+    'prd1btn prd2btn prd3btn'
+    'prdlbl prdlbl prdlbl';
+    flex-shrink: 1;
+    background-color:#D9D9D9;
+}
+
+.space {
+    grid-area:space;
+}
+
+.btnwrapper {
+    border:1px solid black;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#period1btn {
+    grid-area:prd1btn;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto;
+    background-color: red;
+    padding:10px;
+}
+#period2btn {
+    grid-area:prd2btn;
+    border-radius: 50%;
+    border:1px solid black;
+    background-color: red;
+    padding:10px;
+    
+}
+#period3btn {
+    grid-area:prd3btn;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:10px;
+}
+.periodlabel {
+    grid-area:prdlbl;
+    border:1px solid black;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#D9D9D9;
+}
+
+#timer {
+    background-color:#D9D9D9;
+    width:100%;
+    margin:auto auto;
+    text-align: center;
+    font-size: 3em;
+    color:red;
+    border: 2px solid black;
+}
+
+#period {
+    background-color:#D9D9D9;
+    width:50%;
+    margin:auto auto;
+    text-align: center;
+    font-size: 3em;
+    color:red;
+    border: 2px solid black;
+}
+
+#awaypenalties {
+    background-color:#D9D9D9;
+    width:50%;
+    margin:auto auto;
+    text-align: center;
+    font-size: 3em;
+    color:red;
+    border: 2px solid black;
+}
+
+#homepenalties {
+    background-color:#D9D9D9;
+    width:50%;
+    margin:auto auto;
+    text-align: center;
+    font-size: 3em;
+    color:red;
+    border: 2px solid black;
+}
+    
+.awaycpcontainer {
+    grid-area:acpcon;
+    display: grid;
+    grid-template-areas: 'mns1agoalbtn pls1agoalbtn agoallbl'
+    'mns1apenbtn pls1apenbtn apenlbl'
+    'albl albl albl';
+    gap:0;
+    flex-shrink: 1;
+}
+#mns1awaygoalbtn {
+    grid-area:mns1agoalbtn;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:5px;
+}
+#pls1awaygoalbtn {
+    grid-area:pls1agoalbtn;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:5px;
+}
+
+.awaygoalslabel {
+    grid-area:agoallbl;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-weight: bold;
+    background-color: #D9D9D9; 
+}
+
+#mns1awaypenaltybtn {
+    grid-area:mns1apenbtn;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:5px;
+}
+#pls1awaypenaltybtn {
+    grid-area:pls1apenbtn;
+    border-radius: 50%;
+    border:1px solid black;
+    margin: auto auto;
+    background-color: red;
+    padding:5px;
+    
+}
+.awaypenaltieslabel {
+    grid-area:apenlbl;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-weight: bold;
+    background-color: #D9D9D9;
+}
+.awaylabel {
+    grid-area:albl;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-weight: bold;
+    background-color: #D9D9D9; 
+}
